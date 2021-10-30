@@ -1,48 +1,84 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
+import { Button } from "@material-ui/core";
 
-const Container = styled.div `
-   width: 100%;
-   height: 100vh;
-   background-color: #bdbdbd89;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-`
+const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-color: #ffd0005e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
-const Form = styled.div `
-   width: 85%;
-   height: 80vh;
-   background-color: #fff;   
-   border: 2px solid #000;
-   border-radius: 15px;
-   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+const Landing = styled.div`
+  width: 85%;
+  height: 80vh;
+  background-image: url('https://st4.depositphotos.com/10109696/i/600/depositphotos_202495796-stock-photo-grey-metal-texture-wall-abstract.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid #424242;
+  border-radius: 15px;
+  box-shadow: 0 10px 38px #424242, 0 10px 38px #424242;
+  font-family: var(--font-text);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  div h1{
+     font-size: 48px;
+  }
+
+  div h2{
+     font-size: 30px;
+     padding: 15px;
+  }
+
+  div p {
+     padding-bottom: 40px;
+     font-size: 20px;
+  }
+
+  Button {
+   width: 250px;
+   font-size: 20px;
    font-family: var(--font-text);
-   padding: 10px;
-`
+   font-weight: 600;
+  }
+`;
 
-const Span = styled.span `
-   margin-left: 10px;
-   color: #ffd000;
-   font-size: 40px;
-   font-family: var(--font-title);
-   letter-spacing: 2px;
-`
+const Span = styled.span`
+  margin-left: 10px;
+  color: #ffd000;
+  font-size: 50px;
+  font-family: var(--font-title);
+  letter-spacing: 2px;
+  text-shadow: 0 5px 20px #424242;
+`;
 
 const Home = () => {
-   return (
+  return (
       <Container>
-         <Form>
-            <div>
-               <h1>Se inscreva e faça parte da família<Span>RESÍLIA</Span></h1>
-               <p>Vamos ajudar você a trilhar seu caminho pelo mundo da tecnologia</p>
-               <p>basta preencher esse formulário que entraremos em contato.</p>
-            </div>            
-            <img src='./assets/img/imageForm.png' alt="ImageForm" />
-                        
-         </Form>
+        <Landing>
+          <div>
+             <h1>
+                INSCRIÇÕES ABERTAS PARA TURMAS DE DEZEMBRO 2021
+             </h1>
+             <br />
+             <br />
+            <h2>
+              Se inscreva e faça parte da família<br/><Span>RESÍLIA</Span>
+            </h2>            
+            <p>
+              Vamos ajudar você a trilhar seu caminho pelo mundo da tecnologia<br/>basta deixar suas informações que entraremos em contato.</p>
+          </div>
+          <Button variant="outlined" color='primary'>Fazer Inscrição</Button>
+        </Landing>
       </Container>
-   )
-}
+  );
+};
 
-export default Home
+export default Home;
