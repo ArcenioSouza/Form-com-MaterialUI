@@ -1,6 +1,16 @@
 # Formulário de inscrição para o Resília
 
+Atividade proposta pelo professor Jarom do curso de formação de desenvolvedores web da Resília.
 
+## Objetivos
+
+[ok] - Criar um formulário de inscrição
+
+[ok] - Aprender a usar o framework Material UI
+
+[ok] - Praticar o uso de componentes com props no React
+
+[ok] - Praticar o uso de useState para mudar o estado da página
 
 ## Uso do Material UI
 
