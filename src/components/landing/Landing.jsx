@@ -2,53 +2,51 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "@material-ui/core";
 
-const Landing = styled.div`
-  width: 85%;
-  height: 80vh;
-  background-color: #eeebeb;
-  border-radius: 15px;
-  box-shadow: 0 10px 38px #424242, 0 10px 38px #424242;
-  font-family: var(--font-text);
+const Landing = styled.div`  
   padding: 40px;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  z-index: 2;
 
   div h1 {
     font-size: 48px;
+    text-align: center;
   }
 
   div h2 {
-    font-size: 30px;
+    font-size: 40px;
     padding: 15px;
+    text-align: center;
   }
 
-  div p {
-    margin-right: 400px;
-    margin-top: 50px;
-    padding-bottom: 40px;
-    font-size: 20px;
-  }
-
-  Button {
-    margin-right: 400px;
-    width: 250px;
-    font-size: 20px;
-    font-family: var(--font-text);
-    font-weight: 600;
-  }
-
-  div .wrapper{
+  .wrapper {
     display: flex;
+    padding: 10px;
   }
 
-  div .wrapper .wrapper-paragraph{
-    width: 30%;
+  .wrapper-paragraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 40px;
+
+    p{
+      padding-top: 20px;
+    }
+
+    Button{
+      margin-top: 25px;
+      width: 500px;
+    }
   }
-  div .wrapper .wrapper-image{
-    width: 30%;
+
+  img{
+      position: static;
+      width: 600px;
+      height: 350px;
   }
 `;
 
@@ -74,11 +72,12 @@ const LandingPage = ({ setIsForm }) => {
           <Span>RESÍLIA</Span>
         </h2>
         <div className="wrapper">
-          <div className="wraper-paragraph">
+          <div className="wrapper-paragraph">
             <p>
               Em seis meses você estará dominando as skills necessárias para
               conseguir sua sonhada oportunidade no mercado de trabalho.
-              <br />
+            </p>
+            <p>
               Se inscreva em uma de nossas trilhas
               <br />
               <strong>Formação WebDev Full Stack</strong>
@@ -86,19 +85,17 @@ const LandingPage = ({ setIsForm }) => {
               <strong>Formação em Data Analytics</strong>
             </p>
             <Button
-            variant="outlined"
-            color="primary"
-            onClick={() => setIsForm(true)}
-          >
-            Fazer Inscrição
-          </Button>
+              variant="outlined"
+              color="primary"
+              onClick={() => setIsForm(true)}
+            >
+              Fazer Inscrição
+            </Button>
           </div>
-        </div>
-        <div className="wrapper-image">
-          <img
-            src="https://i.pinimg.com/564x/7b/f9/f7/7bf9f782cdf21b0ed3c74865bef0c4ec.jpg"
-            alt="imagemFundo"
-          />
+            <img
+              src="https://i.pinimg.com/564x/7b/f9/f7/7bf9f782cdf21b0ed3c74865bef0c4ec.jpg"
+              alt="imagemFundo"
+            />
         </div>
       </div>
     </Landing>

@@ -13,13 +13,23 @@ const Container = styled.div`
   background-color: #ffd000;
 `;
 
-const Home = () => {
+const Card = styled.div `
+  width: 95%;
+  height: 90vh;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 38px #424242, 0 10px 38px #424242;
+  font-family: var(--font-text);
+`
 
+const Home = () => {
   const [isForm, setIsForm] = useState(false);
 
   return (
     <Container>
-      {isForm ? <Form setIsForm={setIsForm} /> : <LandingPage setIsForm={setIsForm} />}
+      <Card>
+        {isForm ? <Form setIsForm={setIsForm} /> : <LandingPage setIsForm={setIsForm} />}
+      </Card>
     </Container>
   );
 };
