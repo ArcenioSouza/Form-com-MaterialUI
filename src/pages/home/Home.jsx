@@ -7,10 +7,10 @@ import { useState } from "react";
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: #ffd0005e;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #ffd000;
 `;
 
 const Home = () => {

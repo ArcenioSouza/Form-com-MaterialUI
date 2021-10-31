@@ -12,6 +12,12 @@ Atividade proposta pelo professor Jarom do curso de formação de desenvolvedore
 
 [ok] - Praticar o uso de useState para mudar o estado da página
 
+## Imagens do projeto
+
+![image1](./src/assets/img/resiliaform1.png)
+
+![image2](./src/assets/img/resiliaform2.png)
+
 ## Uso do Material UI
 
 Instalação do Material UI
