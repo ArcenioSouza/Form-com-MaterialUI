@@ -2,22 +2,43 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "@material-ui/core";
 
-const Landing = styled.div`  
+const Landing = styled.div`
   padding: 40px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 456px) {
+    padding: 10px;
+  }
+
   div h1 {
     font-size: 48px;
     text-align: center;
+
+    @media (max-width: 800px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 456px) {
+      font-size: 1.3rem;
+      padding: 10px;
+    }
   }
 
   div h2 {
     font-size: 40px;
     padding: 15px;
     text-align: center;
+
+    @media (max-width: 800px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 456px) {
+      font-size: 1rem;
+    }
   }
 
   .wrapper {
@@ -30,23 +51,46 @@ const Landing = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: 30px;
+    font-size: 1.7em;
     margin-top: 40px;
 
-    p{
-      padding-top: 20px;
+    @media (max-width: 956px) {
+      font-size: 20px;
     }
 
-    Button{
-      margin-top: 25px;
-      width: 500px;
+    @media (max-width: 456px) {
+      margin-top: 10px;
+      font-size: 1rem;
     }
   }
 
-  img{
-      position: static;
-      width: 600px;
-      height: 350px;
+  p {
+    padding-top: 20px;
+  }
+
+  Button {
+    margin-top: 25px;
+    width: 500px;
+
+    @media (max-width: 956px) {
+      width: 200px;
+    }
+  }
+
+  img {
+    position: static;
+    bottom: 0;
+    width: 600px;
+    height: 350px;
+
+    @media (max-width: 956px) {
+      width: 500px;
+      height: 250px;
+    }
+
+    @media (max-width: 725px) {
+      display: none;
+    }
   }
 `;
 
@@ -57,6 +101,10 @@ const Span = styled.span`
   font-family: var(--font-title);
   letter-spacing: 2px;
   text-shadow: 2px 2px 8px #424242;
+
+  @media (max-width: 486px) {
+    font-size: 1.5em;
+  }
 `;
 
 const LandingPage = ({ setIsForm }) => {
@@ -92,10 +140,10 @@ const LandingPage = ({ setIsForm }) => {
               Fazer Inscrição
             </Button>
           </div>
-            <img
-              src="https://i.pinimg.com/564x/7b/f9/f7/7bf9f782cdf21b0ed3c74865bef0c4ec.jpg"
-              alt="imagemFundo"
-            />
+          <img
+            src="https://i.pinimg.com/564x/7b/f9/f7/7bf9f782cdf21b0ed3c74865bef0c4ec.jpg"
+            alt="imagemFundo"
+          />
         </div>
       </div>
     </Landing>
