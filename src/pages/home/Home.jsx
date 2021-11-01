@@ -20,6 +20,9 @@ const Card = styled.div `
   border-radius: 15px;
   box-shadow: 0 10px 38px #424242, 0 10px 38px #424242;
   font-family: var(--font-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 const Home = () => {
