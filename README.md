@@ -12,6 +12,8 @@ Atividade proposta pelo professor Jarom do curso de formação de desenvolvedore
 
 [ok] - Praticar o uso de useState para mudar o estado da página
 
+[ok] - Praticar o ajuste de responsividade do site
+
 ## Imagens do projeto
 
 ![image1](./src/assets/img/resiliaform1.png)
